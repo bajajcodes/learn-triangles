@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:roort{
+    --description-color:rgb(115, 115, 115); 
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin:0px;
+    background-color: #4596ddb4;
+}
+
+.container{
+    /* border:2px solid rgb(206, 27, 27); */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+
+.container-centered{
+    border:5px solid black;
+    max-width: 40%;
+    margin:auto;
+    margin-bottom: 1rem;
+}
+
+.list-non-bullet{
+    list-style-type: none;
+}
+
+.list-item-inline{
+    display: inline;
+    padding:0rem .5rem;
+}
+
+.link{
+    text-decoration: none;
+    padding:0.5rem 1rem;
+    color: black;
+    cursor: pointer;
+}
+
+
+.link:hover{
+    text-decoration: underline;
+}
+
+.nav-bar{
+    padding:1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.nav-bar-link-active{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h1{
+    text-align: center;
+}
+
+form{
+    /* border:1px solid black; */
+    padding:0 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form div{
+    /* border:2px solid red; */
+    border:3px solid black;
+    padding:.5rem;
+    margin:.5rem auto;
+}
+
+button{
+    cursor: pointer;
+    color: #fff;
+    background-color: #3071a9;
+    border:3px solid black;
+    /* border-color: #285e8e; */
+    border-radius: 4px;
+    width: 50%;
+    margin: auto;
+    font-weight: 700;
+    font-size: large;
+    margin:1rem auto;
+}
+
+button:hover{
+    background-color: #07447a;
+}
+
+
+h2{
+    margin-top: 1rem;
+    font-size: medium;
+}
+
+@media(max-width:650px){
+    div{
+        justify-content: space-between;
+        padding:0 .5rem;
+    }
+
+    .nav-bar{
+        flex-direction: column;
+        justify-content: unset;
+        align-items: unset;
+    }
+
+    .list-item-inline{
+        display: block;
+        margin:.5rem 0;
+    }
+
+    p{
+        max-width: initial;
+    }
+
+    form div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    div input{
+        max-width: 100%;
+        margin:auto 0;
+    }
+
+    button{
+        width: 100%;
+    }
+
+}
