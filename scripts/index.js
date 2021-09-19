@@ -4,6 +4,14 @@ const angleB = document.getElementById("angle-b");
 const isTriangleBtn = document.getElementById("is-triangle");
 const message = document.getElementById("istrop");
 
+function isFloat(value){
+    let n = value;
+    let res = n % 1 !== 0; //Number(n) === n &&
+    if(!res){
+        return false;
+    }
+    return true;
+}
 
 function checkAngle(angle){
        updateMessage("");
@@ -14,6 +22,12 @@ function checkAngle(angle){
             return false;
         }else if(isNaN(value)){
             updateMessage(`Angle ${angle.name} cannot be words`);
+            return false;
+        }else if(value < 0){
+            updateMessage(`Angle ${angle.name} cannot be negative number`);
+            return false;
+        }else if(isFloat(value)){
+            updateMessage(`Angle ${angle.name} cannot be floating-type number`);
             return false;
         }
         return true;

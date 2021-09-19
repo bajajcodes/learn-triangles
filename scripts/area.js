@@ -3,6 +3,14 @@ const height = document.getElementById("height");
 const calculateAreaBtn = document.getElementById("calculateArea");
 const message = document.getElementById("message");
 
+function isFloat(value){
+    let n = value;
+    let res = n % 1 !== 0; //Number(n) === n &&
+    if(!res){
+        return false;
+    }
+    return true;
+}
 
 function sendUpdate(msg){
     message.innerText = msg;
@@ -17,7 +25,14 @@ function checkSide(side){
     }else if(isNaN(val)){
         sendUpdate(`${side.name} cannot be word, only number type.`);
         return false;
+    }else if(val < 0){
+        sendUpdate(`Side ${side.name} cannot be negative number`);
+        return false;
+    }else if(isFloat(val)){
+        sendUpdate(`Side ${side.name} cannot be floating-type number`);
+        return false;
     }
+    
     return true;
 }
 
