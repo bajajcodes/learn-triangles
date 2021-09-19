@@ -1,7 +1,7 @@
 const quizForm = document.getElementById("quiz-form");
 const message = document.getElementById("message");
 
-const answers = ["90","right angled"];
+const answers = ["90","right angled","scalene", "both","180"];
 
 function updateMessage(msg){
     message.innerText = msg;
