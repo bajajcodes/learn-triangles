@@ -25,7 +25,7 @@ function updateMessage(msg){
 
 function solveAngle(a,b,c){
     let sumOfAngles = a+b+c;
-    if(!(sumOfAngles <= 180)){
+    if(sumOfAngles <180){
         return false;
     }
     return true;
