@@ -39,10 +39,10 @@ function updateMessage(msg){
 
 function solveAngle(a,b,c){
     let sumOfAngles = a+b+c;
-    if(sumOfAngles <180){
-        return false;
+    if(sumOfAngles  === 180){
+        return true;
     }
-    return true;
+    return false;
 }
 
 function isTriangle(){
