@@ -25,18 +25,17 @@ function onFormSubmit(event){
     updateMessage("");
     let data = new FormData(quizForm);
     let isAnswered1 = data.has('question1');
-    let isAnswered2 = data.has('question2')
+    let isAnswered2 = data.has('question2');
+    let isAnswered3 = data.has('question3');
+    let isAnswered4 = data.has('question4');
+    let isAnswered5 = data.has('question5');
 
     console.log(data.has('question1'),data.has('question2'));
 
-    if(isAnswered1 && isAnswered2){
+    if(isAnswered1 && isAnswered2 && isAnswered3 && isAnswered4 && isAnswered5){
         checkAnswers([...data.values()]);
-    }else if(isAnswered1){
-        updateMessage("Select answer to question2");
-    }else if(isAnswered2){
-        updateMessage("Select answer to question1.");
     }else{
-        updateMessage("Select answer to question1 and question2.");        
+        updateMessage("Answers all quesitons...");        
     }
 }
 
